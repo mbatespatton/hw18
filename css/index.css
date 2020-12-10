@@ -1,3 +1,6 @@
+.inline-block {
+    display: inline-block;
+}
 a, a:visited {
     text-decoration-line: none;
     color: black;
@@ -7,13 +10,18 @@ a:hover {
 }
 body {
     font-family: raleway;
+    flex-direction: column;
+    margin: 0; padding: 0;
 }
 header {
     width: 100%;
-    position: fixed; top: 0;
-    padding: 16px 16px 8px;
     height: 26px;
+    padding: 16px;
     background: white;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
 }
 .logo {
     font-family: raleway;
@@ -22,12 +30,11 @@ header {
     color: black;
     font-size: 25px;
 }
-.inline-block {
-    display: inline-block;
-}
 nav {
-    float: right; margin-right: 28px;
     font-size: 17px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
 }
 nav ul {
     margin: 0;
@@ -38,14 +45,17 @@ nav li {
     text-transform: uppercase;
     list-style-type: none;
     display: inline-block;
-    margin-right: 10px;
+    margin-left: 10px; 
+    margin-right: 0; 
 }
 .content {
     padding-top: 26px;
+    flex: 1;
 }
 .heroImg {
     background: #a0a0f5;
     height: 500px;
+    width: 100%;
     font-family: raleway;
     text-transform: uppercase;
     color: white;
@@ -71,6 +81,7 @@ nav li {
     width: 100%;
     justify-content: center;
     margin-top: 40px;
+    overflow: hidden;
 }
 .left-mock {
     width: 700px;
