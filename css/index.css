@@ -77,11 +77,60 @@ nav li {
     font-weight: normal; 
     margin-bottom: 0;
 }
-
+.grid-container {
+    display: grid;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 20px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+.grid-item {
+    border: 1px solid grey;
+    border-top: none;
+    padding: 4px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+}
+.grid-item1 {
+    border: 1px solid grey;
+    border-top: none;
+    padding: 4px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.grid-item2 {
+    border: 1px solid grey;
+    border-top: none;
+    padding: 4px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.grid-item3 {
+    border: 1px solid grey;
+    border-top: none;
+    padding: 4px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+p.grid-item {
+    margin: 0;
+    border-top: none;
+    border: 1px solid grey;
+}
 .rightlap {
     width: 100%;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: 40px;
     padding-left: 25px;
     align-items: center;
     overflow: hidden;
@@ -89,16 +138,12 @@ nav li {
 .rightlap .project-info {
     width: 300px;
     height: 300px;
-    background-color: #4F679E;
+    background-color: #D97978;
     margin: 0 40px;
     padding: 20px;
     color: white;
     cursor: pointer;
 }
-
-
-
-
 .triple {
     width: 100%;
     justify-content: center;
@@ -108,12 +153,11 @@ nav li {
 .left-mock {
     width: 700px;
     height: 600px;
-    background-color: lightgrey;
 }
 .triple .project-info {
     width: 300px;
     height: 300px;
-    background-color: #D97978;
+    background-color: #6C98C6;
     margin: 0 40px;
     padding: 20px;
     color: white;
@@ -122,12 +166,23 @@ nav li {
 .project-info:hover {
     opacity: .8;
 }
-.triple .right-mock {
-    width: 600px;
-    height: 600px;
-    background-color: lightgrey;
+.leftlap {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 25px;
+    align-items: center;
+    overflow: hidden;
 }
-
+.leftlap .project-info {
+    width: 300px;
+    height: 300px;
+    background-color: #8D4546;
+    margin: 0 40px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+}
 footer {
     border-top: 1px solid lightgrey;
     margin-top: 50px;
@@ -138,4 +193,26 @@ footer img {
 }
 footer a:hover {
     opacity: .8;
+}
+@media only screen and (max-width: 600px) {
+    .mock, .left-mock, .right-mock {
+        display: none;
+        justify-content: center;
+        margin: 0;
+    }
+    .logo {
+        font-size: 15px;
+    }
+    .rightlap, .leftlap, .project-info {
+        padding-left: 0;
+    }
+    .heroImg h1 {
+        font-size: 30px;
+    }
+    .heroImg h2 {
+        font-size: 15px;
+    }
+    nav {
+        font-size: 10px;
+    }
 }
